@@ -46,3 +46,8 @@
 .card-bigger {
     transform: scale(1.1) rotateZ(55deg);
 }
+
+.player-position {
+    position: absolute;
+    right: 0;
+}
