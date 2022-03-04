@@ -1,1 +1,11 @@
-<div class="background"></div>
+<div class="background">
+    <img *ngFor="let card of game.playedCards" class="card-cover card-bigger" [ngStyle]="{'left.px':650}"
+    src="/assets/img/cards/{{card}}.png">
+    <img [ngStyle]="{'left.px':300 + i*5}" *ngFor="let c of [0,1,2,3]; let i = index;"
+        class="card-cover" src="/assets/img/cards/card_cover.png">
+        <img (click)="showCard()" style="left: 320px "
+        class="card-cover big-card" src="/assets/img/cards/card_cover.png">
+    <img *ngIf="pickCard" class="card-cover animate-card" [ngStyle]="{'left.px':320}"
+        src="/assets/img/cards/{{currentCard}}.png">
+    
+</div>

@@ -1,11 +1,48 @@
-body {
-    margin: 0;
-}
+// background
 
 .background {
-    background-image: url("/assets/img/bahamas.jpg");
+    background-image: url("/assets/img/bahamasCut.png");
     background-position: bottom;
-    max-width: 100%;
     width: 100vw;
     height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+// card cover
+
+.card-cover {
+    width: 90px;
+    height: 140px;
+    position: absolute;
+    bottom: 200px;
+    transform: rotateZ(55deg);
+}
+
+.big-card:hover {
+    transform: scale(1.1)rotateZ(55deg);
+    cursor: pointer;
+}
+//animate card
+
+.animate-card {
+    animation: cardFly 2s ease;
+    transform: scale(1.1) translateX(300px) rotateZ(55deg);
+    
+}
+
+@keyframes cardFly {
+    0% {
+        transform: scale(1.1) rotateZ(55deg);
+    }
+    100% {
+        transform: scale(1.1) translateX(300px) rotateZ(55deg);
+    }
+}
+
+.card-bigger {
+    transform: scale(1.1) rotateZ(55deg);
 }
